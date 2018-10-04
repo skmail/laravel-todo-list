@@ -24,7 +24,9 @@ class TodoRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|string'
+            'title' => 'required|string',
+            'status' => 'in:' . implode(',',array_keys(config('app.todo_status_list'))),
+            'parent_id' => 'nullable|exists:todos,id'
         ];
     }
 }

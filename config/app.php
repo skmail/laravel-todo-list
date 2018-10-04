@@ -224,4 +224,10 @@ return [
 
     ],
 
+
+    'todo_status_list' => [
+        'completed' => 'Completed',
+        'pending' => 'Pending'
+    ]
+
 ];

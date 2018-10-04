@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Observers\TodoObserver;
+use App\Todo;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Todo::observe(TodoObserver::class);
     }
 
     /**

@@ -68,22 +68,22 @@ class TodoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(TodoRequest $todoRequest, Todo $todo)
+        public function update(Todo $todo, TodoRequest $todoRequest)
     {
         $todo->update($todoRequest->all());
 
         return response()->json([]);
-
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
+     * @throws \Exception
      */
-    public function destroy($id)
+    public function destroy(Todo $todo)
     {
-        //
+        $todo->delete();
     }
 }
