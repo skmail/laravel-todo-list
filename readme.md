@@ -18,4 +18,4 @@
 
 [x] send email to assigned user
 
-[ ] import todo items from google sheet
+[x] import todo items from google sheet
