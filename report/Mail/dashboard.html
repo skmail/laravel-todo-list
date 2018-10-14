@@ -2,7 +2,7 @@
 <html lang="en">
  <head>
   <meta charset="UTF-8">
-  <title>Dashboard for /Users/me/work/projects/testing-1/app/Observers</title>
+  <title>Dashboard for /Users/me/work/projects/testing-1/app/Mail</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../.css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="../.css/nv.d3.min.css" rel="stylesheet" type="text/css">
@@ -20,7 +20,7 @@
      <div class="col-md-12">
       <ol class="breadcrumb">
         <li><a href="../index.html">/Users/me/work/projects/testing-1/app</a></li>
-        <li><a href="index.html">Observers</a></li>
+        <li><a href="index.html">Mail</a></li>
         <li class="active">(Dashboard)</li>
 
       </ol>
@@ -60,7 +60,6 @@
         </tr>
        </thead>
        <tbody>
-       <tr><td><a href="TodoObserver.php.html#7">App\Observers\TodoObserver</a></td><td class="text-right">66%</td></tr>
 
        </tbody>
       </table>
@@ -114,8 +113,6 @@
         </tr>
        </thead>
        <tbody>
-       <tr><td><a href="TodoObserver.php.html#48"><abbr title="App\Observers\TodoObserver::restored">restored</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="TodoObserver.php.html#59"><abbr title="App\Observers\TodoObserver::forceDeleted">forceDeleted</abbr></a></td><td class="text-right">0%</td></tr>
 
        </tbody>
       </table>
@@ -162,7 +159,7 @@ $(document).ready(function() {
       .yAxis.tickFormat(d3.format('d'));
 
     d3.select('#classCoverageDistribution svg')
-      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,1,0,0,0,0], "Class Coverage"))
+      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,0,0,0,0,1], "Class Coverage"))
       .transition().duration(500).call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -180,7 +177,7 @@ $(document).ready(function() {
       .yAxis.tickFormat(d3.format('d'));
 
     d3.select('#methodCoverageDistribution svg')
-      .datum(getCoverageDistributionData([2,0,0,0,0,0,0,0,0,0,0,3], "Method Coverage"))
+      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,0,0,0,0,2], "Method Coverage"))
       .transition().duration(500).call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -230,7 +227,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Cyclomatic Complexity');
 
     d3.select('#classComplexity svg')
-      .datum(getComplexityData([[66.66666666666666,5,"<a href=\"TodoObserver.php.html#7\">App\\Observers\\TodoObserver<\/a>"]], 'Class Complexity'))
+      .datum(getComplexityData([[100,2,"<a href=\"TodoAssigne.php.html#10\">App\\Mail\\TodoAssigne<\/a>"]], 'Class Complexity'))
       .transition()
       .duration(500)
       .call(chart);
@@ -254,7 +251,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Method Complexity');
 
     d3.select('#methodComplexity svg')
-      .datum(getComplexityData([[100,1,"<a href=\"TodoObserver.php.html#15\">App\\Observers\\TodoObserver::created<\/a>"],[100,1,"<a href=\"TodoObserver.php.html#26\">App\\Observers\\TodoObserver::updated<\/a>"],[100,1,"<a href=\"TodoObserver.php.html#37\">App\\Observers\\TodoObserver::deleted<\/a>"],[0,1,"<a href=\"TodoObserver.php.html#48\">App\\Observers\\TodoObserver::restored<\/a>"],[0,1,"<a href=\"TodoObserver.php.html#59\">App\\Observers\\TodoObserver::forceDeleted<\/a>"]], 'Method Complexity'))
+      .datum(getComplexityData([[100,1,"<a href=\"TodoAssigne.php.html#19\">App\\Mail\\TodoAssigne::__construct<\/a>"],[100,1,"<a href=\"TodoAssigne.php.html#29\">App\\Mail\\TodoAssigne::build<\/a>"]], 'Method Complexity'))
       .transition()
       .duration(500)
       .call(chart);

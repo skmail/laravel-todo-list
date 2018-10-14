@@ -17,4 +17,9 @@ class Todo extends Model
     {
         return $this->hasMany(Todo::class,'parent_id');
     }
+
+    public function assignees()
+    {
+        return $this->belongsToMany(User::class);
+    }
 }

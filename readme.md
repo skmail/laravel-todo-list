@@ -14,8 +14,8 @@
 
 [x] manage todo requires authentication
 
-[ ] todo can be assigned to user
+[x] todo can be assigned to user
 
-[ ] send email to assigned user
+[x] send email to assigned user
 
 [ ] import todo items from google sheet
